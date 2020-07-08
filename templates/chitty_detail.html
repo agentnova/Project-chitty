@@ -1,0 +1,77 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Untitled Document</title>
+    <style type="text/css">
+   *{
+
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+
+}
+       html{
+		overflow: scroll;
+		overflow-x: hidden;
+	}
+    body {
+		font-family: dosis;
+		background: white;
+		font-weight: 500;
+		text-transform: capitalize;
+	}
+	::-webkit-scrollbar{
+			width: 0px;
+			background: transparent;
+		}
+             .section{
+            border: solid 2px white;
+            width: 800px;
+            height: auto;
+            text-align-last: center;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 15px grey;
+            border-radius: 20px;
+            padding: 20px;
+
+
+
+        }
+        .top{
+            padding-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+<script type="text/javascript" src="/static/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/static/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
+
+<h2 align="center">Name : {{ data2[0] }}</h2>
+
+<div align="center">
+<table align="center"  class="table table-striped">
+<tr>
+<th>#</th>
+<th>Date</th>
+<th>Amount</th>
+    <th>Status</th>
+
+</tr>
+    {% for i in data %}
+<tr>
+<td>{{ loop.index }}</td>
+<td>&nbsp;{{ i[4]}}</td>
+<td>&nbsp;{{ i[2]}}</td>
+<td>&nbsp;{{ i[3]}}</td>
+
+
+</tr>
+    {% endfor %}
+
+</table>
+</div>
+</body>
+</html>

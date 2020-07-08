@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <style type="text/css">
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        * {
+
+
+            font-family: 'Varela Round', sans-serif;
+
+
+        }
+
+        body {
+            font-family: dosis;
+
+            font-weight: 500;
+            text-transform: capitalize;
+            background-image: url("static/bg.jpg");
+            background-size: 1800px;
+            background-repeat: no-repeat;
+
+
+
+
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.5s;
+            width: 200px;
+            height: 250px;
+            border-radius: 5px;
+            display: inline-block;
+            background: white;
+
+
+
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 red;
+
+        }
+
+        .container {
+            padding: 2px 16px;
+            background: white;
+
+            padding-right: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+
+        }
+
+
+
+
+        nav {
+            text-align: center;
+            padding: 5px;
+
+        }
+
+        nav a {
+            color: white;
+            border: black solid 2px;
+            background: black;
+            padding: 10px;
+
+            box-shadow: 1px 1px 5px black;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.5s;
+
+        }
+
+        nav a:hover {
+            background: grey;
+
+        }
+
+        .sect {
+            padding: 5px;
+        }
+
+        .card img {
+            height: 100px;
+            width: 100px;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            padding-top: 50px;
+
+
+        }
+    </style>
+    <title>Untitled Document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+    <form id="form1" name="form1" method="post" action="">
+        <nav>
+
+
+
+                <a href="/">&nbspLogout&nbsp</a></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        </nav>
+
+        <h2 align="center">Hello {{ data[0] }}</h2>
+
+        <div class="sect" align="center">
+
+
+            <a href="/view_user_history">
+            <div class="card">
+                <img src="static/img/portfolio.png" alt="">
+                <div class="container">
+                    <h5>payment History</h5>
+                </div>
+            </div>
+            </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+    </form>
+
+</body></html>

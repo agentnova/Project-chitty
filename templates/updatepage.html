@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+     <style type="text/css">
+    *{
+
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+
+}
+    body{
+        font-family: dosis;
+
+    font-weight: 500;
+    text-transform: capitalize;
+
+
+
+
+}
+         .section{
+             background: white ;
+            border: solid 2px white;
+            width: 400px;
+            height: auto;
+
+            box-sizing: border-box;
+            box-shadow: 2px 2px 15px grey;
+            border-radius: 20px;
+            padding-bottom: 10px;
+
+
+        }
+        .top{
+            padding-top: 20px;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+            function validations()
+                {
+
+                   var a=document.getElementsByName("amount")[0].value;
+                   var c=document.getElementsByName("status")[0].value;
+
+                   if(a=="" || c=="")
+                       {
+                           document.getElementById("alerts").innerHTML="<h4><b>*All fields are required</b></h4>";
+                           return false;
+                       }
+                    else{
+                        return true;
+                        }
+                }
+            </script>
+</head>
+
+<body>
+<script type="text/javascript" src="/static/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/static/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
+
+
+<form onsubmit="return validations();" method="post" action="/update_post">
+<div class="form-group top" align="center">
+    <div align="center" class="section">
+<h2 align="center">Update payment</h2>
+        {% for i in dat %}
+<table  height="300" width="364">
+<tr>
+<td> Name:</td>
+<td><input type="text" name="name" class="form-control" value="{{ i[2] }}" readonly/></td>
+</tr>
+<tr>
+<td> Amount :</td>
+<td><input type="number" placeholder="amount" name="amount" class="form-control"/></td>
+</tr>
+<tr>
+<td>Paid or not :</td>
+    <td><select name="status" class="form-control"><option value="paid">Paid</option>
+    <option value="not paid">Not paid</option> </select></td>
+</tr>
+<tr>
+<td><input type="hidden"  name="uid" class="form-control" value="{{ i[0] }}"/>
+</td>
+</tr>
+    {% endfor %}
+
+<tr>
+    <td></td>
+    <td> <input type="submit" value="update"  class="btn btn-primary" align="center" /></td>
+</tr>
+</table>
+
+         <div id="alerts" style="color: red" align="center"></div>
+
+</div>
+</div>
+
+</form>
+
+
+</body>
+</html>

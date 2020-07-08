@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Untitled Document</title>
+    <style type="text/css">
+    *{
+
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+
+}
+    body{
+        font-family: dosis;
+    background: white;
+    font-weight: 500;
+    text-transform: capitalize;
+
+
+
+
+}
+         .section{
+            border: solid 2px white;
+            width: 500px;
+            height: 300px;
+            text-align: center;
+
+            box-shadow: 2px 2px 15px grey;
+            border-radius: 20px;
+             padding-top: 5px;
+
+
+        }
+        .top{
+            padding-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<script type="text/javascript" src="static/bootstrap.min.js"></script>
+	<script type="text/javascript" src="static/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/bootstrap.min.css">
+
+<div align="center" class="top">
+<form method="post" action="/login" class="section">
+
+<div class="form-group" align="center">
+<img src="static/img/abcd.jpeg" style="height: 90px;width: 90px;border-radius: 50px;">
+<table  height="120" width="364">
+<tr>
+<td><input type="text" placeholder="username" name="uname" id="uname" class="form-control"/></td>
+</tr>
+<tr>
+<td><input type="password" placeholder="password" name="upass" id="upass" class="form-control"/>
+</td>
+</tr>
+
+</table>
+    <input type="submit" value="login" name="login" class="btn btn-primary" />
+</div>
+
+</form>
+
+    </div>
+</body>
+</html>
