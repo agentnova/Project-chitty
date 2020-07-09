@@ -2,10 +2,6 @@ from flask import Flask, render_template, request, session, jsonify
 from dbconnect import Db
 import datetime
 
-
-
-
-
 app = Flask(__name__)
 
 #######################################################################################
